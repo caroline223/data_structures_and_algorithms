@@ -1,5 +1,14 @@
 def selection_sort(arr)
-  # type your code in here
+  n = arr.length - 1
+
+  n.times do |i|
+    min_index = i 
+    for j in (i + 1)..n 
+      min_index = j if arr[min_index] > arr[j]
+    end
+    arr[i], arr[min_index] = arr[min_index], arr[i]
+  end
+ return arr
 end
 
 if __FILE__ == $PROGRAM_NAME
