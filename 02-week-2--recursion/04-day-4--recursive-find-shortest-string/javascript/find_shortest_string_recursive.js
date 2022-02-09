@@ -1,8 +1,6 @@
 function findShortestStringRecursive(arr) {
   // type your code here
-  if (arr.length === 1){
-    return arr[0]
-  }
+  if (arr.length === 1) return arr[0]
 
   const secondWord = findShortestStringRecursive(arr.slice(1))
 
