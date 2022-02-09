@@ -1,5 +1,10 @@
 def find_shortest_string_recursive(arr)
   # type your code in here
+  return arr[0] if arr.length == 1
+
+  second_word = find_shortest_string_recursive(arr[1..-1])
+
+  arr[0].length <= second_word.length ? arr[0] : second_word
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -21,3 +26,11 @@ end
 
 # Please add your pseudocode to this file
 # And a written explanation of your solution
+
+#Iterative solution
+
+# def find_shortest_string_recursive
+
+#arr.sort_by{|s| s.length }[0]
+
+#end
