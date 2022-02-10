@@ -2,12 +2,12 @@ function selectionSortRecursive(arr) {
   // type your code here
  if (arr.length === 0) return [] //base case
 
- const minValue = Math.min(...arr)
- const index = arr.indexOf(minValue)
- arr.splice(index, 1)
+ const minValue = Math.min(...arr) //find the minimum value within the given array
+ const index = arr.indexOf(minValue) //based on the minimum value, find the associated value of the index number
+ arr.splice(index, 1) // replaces the beginning index of the array with the index associated with the smallest value
 
  const result = selectionSortRecursive(arr)
- result.unshift(minValue)
+ result.unshift(minValue) //ensures that the minimum value of the array preceeds the other values within the array
 
  return result 
 }
