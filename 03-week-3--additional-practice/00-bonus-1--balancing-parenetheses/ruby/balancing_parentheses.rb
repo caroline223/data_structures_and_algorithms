@@ -1,5 +1,21 @@
 def balancing_parentheses(string)
   # type your code in here
+  parentheses = []
+
+  string.chars.each do |token|
+    case token
+      when "("
+        parentheses.push "("
+      when ")"
+        if parentheses[parentheses.length - 1] == "("
+          parentheses.pop()
+        else
+          parentheses.push("#")
+        end 
+    end
+  end
+
+  parentheses.length
 end
 
 if __FILE__ == $PROGRAM_NAME
