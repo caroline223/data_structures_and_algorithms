@@ -64,3 +64,12 @@ module.exports = romanNumeral;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+//In order to write the code, first, I had to establish the parameters for which the roman numerals are formed.
+//I established that through creating the romanLetter variable
+// I also created the accumulator variable which when the Roman numeral is converted to an integer, it would then add to the accumulator
+//which serves as a baseline 
+//Afterwards, I then created a loop which incoporated a conditional for each changing point within the roman numerals
+//i.e. 5, 10, 50, 100, 500, and 1000.
+//Lastly, I had to ensure that the function returned the value of the accumulator. 
+
