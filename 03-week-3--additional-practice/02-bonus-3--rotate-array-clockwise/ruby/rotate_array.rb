@@ -1,5 +1,13 @@
 def rotate_array(arr, k)
   # type your code in here
+
+  return arr if arr.empty? || k.zero?
+
+  rotations = k % arr.length 
+
+  removed = arr.slice!(arr.length - rotations, rotations)
+
+  removed.concat(arr)
 end
 
 if __FILE__ == $PROGRAM_NAME
