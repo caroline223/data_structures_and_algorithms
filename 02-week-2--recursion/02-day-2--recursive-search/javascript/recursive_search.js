@@ -3,13 +3,10 @@ function recursiveSearch(arr, target) {
   if(arr[0] === target){
     return true
   }
-  
-  if(arr.length === 0){
+  else if (arr.length === 0){
     return false
   }
-
   return recursiveSearch(arr.slice(1), target)
-  
 }
 
 if (require.main === module) {
