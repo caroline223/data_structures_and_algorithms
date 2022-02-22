@@ -1,17 +1,16 @@
 def balancing_parentheses(string)
-  # type your code in here
   parentheses = []
 
   string.chars.each do |token|
-    case token
+    case token 
       when "("
-        parentheses.push "("
+        parentheses.push("(")
       when ")"
         if parentheses[parentheses.length - 1] == "("
-          parentheses.pop()
+            parentheses.pop()
         else
           parentheses.push("#")
-        end 
+        end
     end
   end
 
