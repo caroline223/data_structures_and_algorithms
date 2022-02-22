@@ -1,6 +1,6 @@
 function romanNumeral(string) {
   // type your code here
-  const romanLetter = {
+  romanLetter = {
     I: 1,
     V: 5,
     X: 10,
@@ -17,30 +17,32 @@ function romanNumeral(string) {
       accumulator += 4
       i++;
     }
-    else if(string[i] === "I" && string[i + 1] === "X"){
+    else if(string[i] == "I" && string[i + 1] === "X"){
       accumulator += 9
       i++;
     }
-    else if(string[i] === "X" && string[i + 1] === "L"){
+    else if(string[i] == "X" && string[i + 1] === "L"){
       accumulator += 40
       i++;
     }
-    else if(string[i] === "X" && string[i + 1] === "C"){
+    else if(string[i] == "X" && string[i + 1] === "C"){
       accumulator += 90
       i++;
     }
-    else if(string[i] === "C" && string[i + 1] === "D"){
+    else if(string[i] == "C" && string[i + 1] === "D"){
       accumulator += 400
       i++;
     }
-    else if(string[i] === "C" && string[i + 1] === "M"){
+    else if(string[i] == "C" && string[i + 1] === "M"){
       accumulator += 900
       i++;
     }
-    else {
+    else{
       accumulator += romanLetter[string[i]]
     }
+
   }
+
   return accumulator
 }
 
@@ -58,6 +60,16 @@ if (require.main === module) {
 
   console.log("Expecting: 402");
   console.log(romanNumeral('CDII'));
+
+  console.log("");
+
+  console.log("Expecting: 1990");
+  console.log(romanNumeral('MCMXC'));
+
+  console.log("");
+
+  console.log("Expecting: 2022");
+  console.log(romanNumeral('MMXXII'));
 }
 
 module.exports = romanNumeral;
