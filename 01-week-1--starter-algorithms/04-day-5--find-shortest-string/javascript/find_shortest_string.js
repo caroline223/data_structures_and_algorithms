@@ -1,5 +1,5 @@
 function findShortestString(arr) {
-  return arr.sort((a, b) => a.length - b.length)[0]
+  return arr.sort((a , b) => a.length - b.length)[0]
 }
 
 if (require.main === module) {
