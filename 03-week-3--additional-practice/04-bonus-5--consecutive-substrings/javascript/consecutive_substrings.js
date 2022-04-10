@@ -31,3 +31,10 @@ module.exports = consecutiveSubstrings;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+// I knew that we could get the consective substrings by iterating over the strings.
+//Once iterating over the string, we push that string into a new array.
+//Furthermore, we had to store that character in a variable, for which that is where we store the 
+//rest of the characters.
+//Then, we iterate over the string starting from one index ahead and push that fragment into the new array
+//as well. 
